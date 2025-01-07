@@ -12,9 +12,6 @@ app.get("/register", (req, res) => {
   res.status(200).send("Welcome to Registration Page");
 });
 
-app.get("/login", (req, res) => {
-  res.status(200).send("Welcome to Login Page");
-});
 
 const PORT = 3000;
 app.listen(PORT, () => {
