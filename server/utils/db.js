@@ -1,13 +1,12 @@
 const mongoose=require("mongoose")
-const URI="mongodb+srv://abdulsalamshah013:W5mA68Yc2Tw8esj7@cluster0.a6jnm.mongodb.net/webadmindb?retryWrites=true&w=majority&appName=Cluster0";
-//mongoose.connect(URI)
+const URI=process.env.MONGODB_URI
 const connectDb=async()=>{
     try {
         await mongoose.connect(URI)
-        console.log("connection successfully");
+        console.log("Database Connection Successfully");
         
     } catch (error) {
-        console.error("Error in connecting to database")
+        console.error("Error in Connecting to Database")
         process.exit(0)
     }
 }
